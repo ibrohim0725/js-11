@@ -38,6 +38,16 @@ console.log(numBig(456));
 
 // 4- Raqamlar teskari tartibda
 // Berilgan butun sonning raqamlarini teskari tartibda yozib, yangi son hosil qiluvchi funksiya yozing.
+function reverse(n) {
+  let res = 0;
+  while (n > 0) {
+    let num = n % 10;
+    res = res * 10 + num;
+    n = Math.trunc(n / 10);
+  }
+  console.log(res);
+}
+reverse(123);
 
 // 5- Tub son tekshirish
 // Berilgan son tub son ekanligini aniqlovchi funksiya yozing.
@@ -62,10 +72,10 @@ console.log(tubSon(2));
 const numFakt = (arg) => {
   let res = 1;
   for (let i = 1; i <= arg; i++) {
-      res *= i;
+    res *= i;
   }
   return res;
-}
+};
 console.log(numFakt(12));
 
 // 10- Sonni bo‘luvchilarini topish
